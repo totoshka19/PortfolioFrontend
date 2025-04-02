@@ -50,3 +50,23 @@ menuLinks.forEach((link) => {
 document.addEventListener("DOMContentLoaded", () => {
   updateLanguage("en"); // Устанавливаем английский язык по умолчанию
 });
+
+// Кнопка "Наверх"
+const backToTopButton = document.getElementById("back-to-top");
+
+// Показываем/скрываем кнопку при прокрутке
+window.addEventListener("scroll", () => {
+  if (window.pageYOffset <= 300) {
+    backToTopButton.classList.add("hidden");
+  } else {
+    backToTopButton.classList.remove("hidden");
+  }
+});
+
+// Плавный скролл вверх
+backToTopButton.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});

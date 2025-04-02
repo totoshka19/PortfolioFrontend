@@ -4,8 +4,7 @@ import {
   mobileMenu,
   burgerIcon,
   closeIcon,
-  menuLinks,
-  contactForm
+  menuLinks
 } from "./const.js";
 import { updateLanguage, closeMobileMenu } from "./utils.js";
 
@@ -45,13 +44,6 @@ menuLinks.forEach((link) => {
   link.addEventListener("click", () => {
     closeMobileMenu(); // Закрываем меню при нажатии на ссылку
   });
-});
-
-// Обработчик отправки формы
-contactForm.addEventListener("submit", (e) => {
-  e.preventDefault();
-  alert("Thank you for your message! I will get back to you soon.");
-  contactForm.reset();
 });
 
 // Инициализация: Отображаем проекты на английском языке при загрузке страницы

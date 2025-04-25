@@ -2,3 +2,33 @@ html {
     scroll-behavior: smooth;
 }
 
+header nav a,
+#mobile-menu a {
+  position: relative;
+  padding-bottom: 4px;
+  transition: color 0.3s ease;
+}
+
+header nav a::after,
+#mobile-menu a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: #F8C15C;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+header nav a:hover::after,
+#mobile-menu a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+header nav a:hover,
+#mobile-menu a:hover {
+  color: #F8C15C;
+}
+

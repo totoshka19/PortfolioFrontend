@@ -10,7 +10,6 @@ export const translations = {
       `To create projects, I prefer to\u00A0use Vite — a\u00A0modern build tool that ensures high development speed and\u00A0ease of\u00A0customization.\n\n` +
       `My goal is to\u00A0create smooth and\u00A0intuitive interfaces for\u00A0users.`,
     skills: "My Skills",
-    "Expert": "Expert",
     "Advanced": "Advanced",
     "Intermediate": "Intermediate",
     education: "Education",
@@ -68,7 +67,6 @@ export const translations = {
       `Для создания проектов я предпочитаю использовать Vite — современный инструмент сборки, который обеспечивает высокую скорость разработки и\u00A0удобство настройки.\n\n` +
       `Моя цель — создавать плавные и\u00A0интуитивно понятные интерфейсы для\u00A0пользователей.`,
     skills: "Мои навыки",
-    "Expert": "Эксперт",
     "Advanced": "Опытный",
     "Intermediate": "Средний уровень",
     education: "Образование",

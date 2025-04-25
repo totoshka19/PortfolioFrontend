@@ -110,10 +110,10 @@ if (musicToggle && bgMusic) {
   musicToggle.addEventListener("click", () => {
     if (isMusicPlaying) {
       bgMusic.pause();
-      musicToggle.textContent = "🔈";
+      musicToggle.textContent = "🔇";
     } else {
       bgMusic.play();
-      musicToggle.textContent = "🔇";
+      musicToggle.textContent = "🔈";
     }
     isMusicPlaying = !isMusicPlaying;
   });

@@ -123,6 +123,11 @@ export const mobileMenu = document.getElementById("mobile-menu");
 export const burgerIcon = document.getElementById("burger-icon");
 export const closeIcon = document.getElementById("close-icon");
 export const menuLinks = document.querySelectorAll("#mobile-menu a");
+export const musicToggle = document.getElementById("music-toggle");
+export const bgMusic = document.getElementById("bg-music");
+export const logo = document.getElementById("logo");
+export const backToTopButton = document.getElementById("back-to-top");
+export const professionEl = document.querySelector('[data-lang="profession"]');
 
 // Цвета для эффекта печатающей машинки
 export const typewriterColors = ["#F8C15C", "#60A5FA", "#9CA3AF"];

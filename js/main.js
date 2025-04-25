@@ -4,7 +4,11 @@ import {
   mobileMenu,
   burgerIcon,
   closeIcon,
-  menuLinks
+  menuLinks,
+  musicToggle,
+  bgMusic,
+  logo,
+  backToTopButton, professionEl
 } from "./const.js";
 import { updateLanguage, closeMobileMenu, typewriterEffect } from "./utils.js";
 import { startHeartAnimation } from "./heart-animation.js";
@@ -28,7 +32,6 @@ langToggle.addEventListener("click", () => {
   }
   updateLanguage(currentLang);
   // Перезапускаем typewriter для текста профессии после смены языка
-  const professionEl = document.querySelector('[data-lang="profession"]');
   const professionText = professionEl.textContent;
   // Фиксируем высоту контейнера, чтобы он не схлопывался при удалении текста
   professionEl.style.minHeight = `${professionEl.getBoundingClientRect().height}px`;
@@ -71,9 +74,6 @@ document.addEventListener("DOMContentLoaded", () => {
   startHeartAnimation({ heartSelector: '.heart-anim', margin: 10, interval: 5000 });
 });
 
-// Кнопка "Наверх"
-const backToTopButton = document.getElementById("back-to-top");
-
 // Показываем/скрываем кнопку при прокрутке
 window.addEventListener("scroll", () => {
   if (window.pageYOffset <= 300) {
@@ -98,7 +98,6 @@ AOS.init({
 });
 
 // Перезагрузка страницы при клике на логотип
-const logo = document.getElementById("logo");
 if (logo) {
   logo.addEventListener("click", () => {
     window.location.reload();
@@ -106,8 +105,6 @@ if (logo) {
 }
 
 // Управление фоновой музыкой по кнопке
-const musicToggle = document.getElementById("music-toggle");
-const bgMusic = document.getElementById("bg-music");
 let isMusicPlaying = false;
 if (musicToggle && bgMusic) {
   musicToggle.addEventListener("click", () => {

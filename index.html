@@ -44,8 +44,8 @@
 				</div>
 			</nav>
 			
-			<!-- Мобильное меню (выпадающее) -->
-			<div id="mobile-menu" class="hidden md:hidden fixed top-[64px] left-0 right-0 bottom-0 bg-gray-900 bg-opacity-100 z-50 overflow-y-auto">
+			<!-- Мобильное меню (плавный выезд слева) -->
+			<div id="mobile-menu" class="fixed md:hidden top-[64px] left-0 right-0 bottom-0 z-50 transform -translate-x-full transition-transform duration-300 ease-in-out bg-gray-900 bg-opacity-100 overflow-y-auto">
 				<div class="flex flex-col justify-center items-center h-full space-y-10">
 					<a href="#about" class="text-2xl hover:text-blue-400" data-lang="about">About</a>
 					<a href="#skills" class="text-2xl hover:text-blue-400" data-lang="skills">Skills</a>

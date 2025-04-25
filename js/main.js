@@ -24,19 +24,18 @@ langToggle.addEventListener("click", () => {
 
 // Обработчик для кнопки бургер-меню
 menuToggle.addEventListener("click", () => {
-  // Переключаем видимость мобильного меню
-  mobileMenu.classList.toggle("hidden");
-
-  // Запрещаем или разрешаем прокрутку страницы
-  if (mobileMenu.classList.contains("hidden")) {
-    document.body.style.overflow = ""; // Разрешаем прокрутку
+  const isHidden = mobileMenu.classList.contains("-translate-x-full");
+  if (isHidden) {
+    // Открываем мобильное меню с анимацией
+    mobileMenu.classList.remove("-translate-x-full");
+    mobileMenu.classList.add("translate-x-0");
+    document.body.style.overflow = "hidden";
+    burgerIcon.classList.add("hidden");
+    closeIcon.classList.remove("hidden");
   } else {
-    document.body.style.overflow = "hidden"; // Запрещаем прокрутку
+    // Закрываем мобильное меню через функцию со сдвигом
+    closeMobileMenu();
   }
-
-  // Переключаем видимость иконок
-  burgerIcon.classList.toggle("hidden");
-  closeIcon.classList.toggle("hidden");
 });
 
 // Обработчики для ссылок в мобильном меню

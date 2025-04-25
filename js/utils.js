@@ -76,7 +76,9 @@ export function updateLanguage(lang) {
 
 // Функция для закрытия мобильного меню
 export function closeMobileMenu() {
-  mobileMenu.classList.add("hidden");
+  // Скрываем мобильное меню, сдвигая его влево
+  mobileMenu.classList.remove("translate-x-0");
+  mobileMenu.classList.add("-translate-x-full");
   document.body.style.overflow = "";
   burgerIcon.classList.remove("hidden");
   closeIcon.classList.add("hidden");

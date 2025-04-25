@@ -13,6 +13,10 @@ export function startHeartAnimation({
   const container = heart.parentElement;
   const img = container.querySelector('img');
 
+  // Настройки максимального числа сердец и режим удаления
+  let isRemoving = false;
+  const maxHearts = 5;
+
   // helper for parsing margin: supports number, 'px', and '%' relative to total dimension
   function parseOffset(val, total) {
     if (typeof val === 'string' && val.trim().endsWith('%')) {
@@ -126,16 +130,27 @@ export function startHeartAnimation({
     // Запускаем анимацию
     setTimeout(() => animate(heart), interval);
 
-    // Обработчик клика: спавним новое сердце в точке клика
+    // Обработчик клика: спавним новое сердце или удаляем его после достижения лимита
     container.addEventListener('click', (e) => {
       const clickedHeart = e.target.closest('.heart-anim');
       if (!clickedHeart) return;
+      const hearts = Array.from(container.querySelectorAll('.heart-anim'));
+      const count = hearts.length;
       const containerRect = container.getBoundingClientRect();
       const hw = clickedHeart.offsetWidth;
       const hh = clickedHeart.offsetHeight;
       const x = e.clientX - containerRect.left - hw / 2;
       const y = e.clientY - containerRect.top - hh / 2;
-      spawnHeart(x, y);
+      if (!isRemoving && count < maxHearts) {
+        spawnHeart(x, y);
+      } else {
+        isRemoving = true;
+        clickedHeart.remove();
+        // Если осталось одно сердце, возвращаемся в режим создания
+        if (container.querySelectorAll('.heart-anim').length <= 1) {
+          isRemoving = false;
+        }
+      }
     });
   }
 

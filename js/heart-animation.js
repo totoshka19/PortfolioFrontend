@@ -24,11 +24,11 @@ export function startHeartAnimation({
   }
 
   // Функция для анимации перемещения сердца
-  function animate() {
+  function animate(heartElement = heart) {
     const cw = container.offsetWidth;
     const ch = container.offsetHeight;
-    const hw = heart.offsetWidth;
-    const hh = heart.offsetHeight;
+    const hw = heartElement.offsetWidth;
+    const hh = heartElement.offsetHeight;
     let x, y;
     if (img) {
       const imgRect = img.getBoundingClientRect();
@@ -48,8 +48,8 @@ export function startHeartAnimation({
     } else {
       const cw = container.offsetWidth;
       const ch = container.offsetHeight;
-      const hw = heart.offsetWidth;
-      const hh = heart.offsetHeight;
+      const hw = heartElement.offsetWidth;
+      const hh = heartElement.offsetHeight;
       const mX = parseOffset(margin, cw);
       const mY = parseOffset(margin, ch);
       const maxX = cw - hw - mX;
@@ -57,10 +57,25 @@ export function startHeartAnimation({
       x = Math.random() * (maxX - mX) + mX;
       y = Math.random() * (maxY - mY) + mY;
     }
-    heart.style.left = `${x}px`;
-    heart.style.top = `${y}px`;
-    heart.style.transform = 'scale(1)';
-    setTimeout(animate, interval);
+    heartElement.style.left = `${x}px`;
+    heartElement.style.top = `${y}px`;
+    heartElement.style.transform = 'scale(1)';
+    setTimeout(() => animate(heartElement), interval);
+  }
+
+  // Функция для создания нового сердца и запуска его анимации
+  function spawnHeart(x, y) {
+    const newHeart = heart.cloneNode(true);
+    container.appendChild(newHeart);
+    newHeart.style.position = 'absolute';
+    newHeart.style.transition = 'none';
+    newHeart.style.left = `${x}px`;
+    newHeart.style.top = `${y}px`;
+    newHeart.style.transform = 'scale(1)';
+    newHeart.style.cursor = 'pointer';
+    newHeart.offsetHeight;
+    newHeart.style.transition = `left ${interval}ms ease, top ${interval}ms ease`;
+    setTimeout(() => animate(newHeart), interval);
   }
 
   // Функция инициализации начальной позиции сердца
@@ -109,7 +124,19 @@ export function startHeartAnimation({
     heart.style.transition = `left ${interval}ms ease, top ${interval}ms ease`;
 
     // Запускаем анимацию
-    setTimeout(animate, interval);
+    setTimeout(() => animate(heart), interval);
+
+    // Обработчик клика: спавним новое сердце в точке клика
+    container.addEventListener('click', (e) => {
+      const clickedHeart = e.target.closest('.heart-anim');
+      if (!clickedHeart) return;
+      const containerRect = container.getBoundingClientRect();
+      const hw = clickedHeart.offsetWidth;
+      const hh = clickedHeart.offsetHeight;
+      const x = e.clientX - containerRect.left - hw / 2;
+      const y = e.clientY - containerRect.top - hh / 2;
+      spawnHeart(x, y);
+    });
   }
 
   // Ждём загрузки картинки, если она есть

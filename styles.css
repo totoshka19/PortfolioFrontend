@@ -52,3 +52,23 @@ header nav a:hover,
   width: 100%;
   left: 0;
 }
+
+/* Фиксированная ширина для кнопки переключения языка */
+#lang-toggle {
+  width: 45px;
+  text-align: center;
+  background-color: #3b82f6 !important;
+  color: white;
+}
+#lang-toggle:hover {
+  background-color: #2563eb !important;
+}
+
+/* Цвет кнопки переключения музыки */
+#music-toggle {
+  background-color: #F8C15C !important;
+  color: white;
+}
+#music-toggle:hover {
+  background-color: #d19e43 !important;
+}

@@ -145,3 +145,32 @@ if (logo) {
     window.location.reload();
   });
 }
+
+// Управление фоновой музыкой по кнопке
+const musicToggle = document.getElementById("music-toggle");
+const bgMusic = document.getElementById("bg-music");
+let isMusicPlaying = false;
+if (musicToggle && bgMusic) {
+  musicToggle.addEventListener("click", () => {
+    if (isMusicPlaying) {
+      bgMusic.pause();
+      musicToggle.textContent = "🔈";
+    } else {
+      bgMusic.play();
+      musicToggle.textContent = "🔇";
+    }
+    isMusicPlaying = !isMusicPlaying;
+  });
+}
+
+// Синхронизируем ширину кнопки музыки с кнопкой переключения языка
+if (musicToggle && langToggle) {
+  const adjustMusicBtnWidth = () => {
+    const width = langToggle.offsetWidth;
+    musicToggle.style.width = `${width}px`;
+  };
+  // Устанавливаем начальную ширину
+  adjustMusicBtnWidth();
+  // Обновляем при изменении размера окна
+  window.addEventListener("resize", adjustMusicBtnWidth);
+}

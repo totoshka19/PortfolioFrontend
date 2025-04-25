@@ -41,6 +41,8 @@
 				<!-- Кнопка переключения языков (всегда видна) -->
 				<div class="flex items-center">
 					<button id="lang-toggle" class="px-3 py-1 bg-blue-500 rounded hover:bg-blue-600">EN</button>
+					<!-- Кнопка включения/отключения музыки -->
+					<button id="music-toggle" class="px-3 py-1 bg-green-500 rounded hover:bg-green-600 ml-2">🔈</button>
 				</div>
 			</nav>
 			
@@ -210,5 +212,8 @@
 		
 		<script type="module" src="./js/main.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+		<!-- Фоновая музыка -->
+		<audio id="bg-music" src="assets/music.mp3" loop></audio>
+		<!-- Music attribution: Bensound | License code: X1FSRMEZMWGMY5DF -->
 	</body>
 </html>

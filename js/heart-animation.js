@@ -36,4 +36,4 @@ export function startHeartAnimation({ heartSelector = '.heart-anim', margin = 10
   } else {
     init();
   }
-} 
+}

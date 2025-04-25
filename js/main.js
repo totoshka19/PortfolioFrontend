@@ -6,58 +6,14 @@ import {
   closeIcon,
   menuLinks
 } from "./const.js";
-import { updateLanguage, closeMobileMenu } from "./utils.js";
+import { updateLanguage, closeMobileMenu, typewriterEffect } from "./utils.js";
 
 // Переключение языка
 let currentLang = "en"; // Текущий язык
 
-// Счётчик для уникальных идентификаторов эффекта typewriter
-let typewriterCounter = 0;
-
-// Массив цветов для печатающего эффекта
-const typewriterColors = ["#F8C15C", "#60A5FA", "#9CA3AF"];
-let currentTypewriterColorIndex = 0;
-
-// Функция печатающего эффекта (typewriter) с поддержкой отмены предыдущих запусков
-function typewriterEffect(el, text, speed = 100, pause = 2000) {
-  // Генерируем уникальный ID для этого запуска
-  const thisId = ++typewriterCounter;
-  // Сохраняем ID в data-атрибуте элемента
-  el.dataset.twmId = thisId;
-  let index = 0;
-  let isDeleting = false;
-  function tick() {
-    // Если в элементе сменился ID, прерываем старый цикл
-    if (el.dataset.twmId !== String(thisId)) return;
-    // При начале нового цикла печати меняем цвет текста
-    if (!isDeleting && index === 0) {
-      el.style.color = typewriterColors[currentTypewriterColorIndex];
-      currentTypewriterColorIndex = (currentTypewriterColorIndex + 1) % typewriterColors.length;
-    }
-    // Обновляем отображаемый текст
-    el.textContent = text.substring(0, index);
-    let delay = speed;
-    if (!isDeleting) {
-      if (index < text.length) {
-        index++;
-      } else {
-        isDeleting = true;
-        delay = pause;
-      }
-    } else {
-      if (index > 0) {
-        index--;
-      } else {
-        // Начинаем новый цикл печати
-        isDeleting = false;
-        delay = pause;
-      }
-    }
-    setTimeout(tick, delay);
-  }
-  // Запускаем цикл
-  tick();
-}
+// Глобальные счётчики для функции typewriterEffect
+window.typewriterCounter = 0;
+window.currentTypewriterColorIndex = 0;
 
 langToggle.addEventListener("click", () => {
   if (currentLang === "en") {

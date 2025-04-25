@@ -123,3 +123,6 @@ export const mobileMenu = document.getElementById("mobile-menu");
 export const burgerIcon = document.getElementById("burger-icon");
 export const closeIcon = document.getElementById("close-icon");
 export const menuLinks = document.querySelectorAll("#mobile-menu a");
+
+// Цвета для эффекта печатающей машинки
+export const typewriterColors = ["#F8C15C", "#60A5FA", "#9CA3AF"];

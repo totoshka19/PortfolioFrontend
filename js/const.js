@@ -8,7 +8,8 @@ export const translations = {
       `I work with\u00A0modern HTML, CSS, JavaScript technologies and\u00A0the React framework.\n\n` +
       `In my work, I actively use tools such as Redux for\u00A0managing the global state of\u00A0the application, SCSS for\u00A0writing structured and\u00A0scalable styles, and\u00A0Tailwind CSS for\u00A0fast and\u00A0flexible layout.\n\n` +
       `To create projects, I prefer to\u00A0use Vite — a\u00A0modern build tool that ensures high development speed and\u00A0ease of\u00A0customization.\n\n` +
-      `My goal is to\u00A0create smooth and\u00A0intuitive interfaces for\u00A0users.`,
+      `My goal is to\u00A0create smooth and\u00A0intuitive interfaces for\u00A0users.\n\n` +
+      `Click on\u00A0the\u00A0heart...`,
     skills: "My Skills",
     "Advanced": "Advanced",
     "Intermediate": "Intermediate",
@@ -65,7 +66,8 @@ export const translations = {
       `Я работаю с\u00A0современными технологиями HTML, CSS, JavaScript и\u00A0фреймворком React.\n\n` +
       `В своей работе я активно использую такие инструменты, как Redux для\u00A0управления глобальным состоянием приложения, SCSS для\u00A0написания структурированных и\u00A0масштабируемых стилей, а\u00A0также Tailwind CSS для\u00A0быстрой и\u00A0гибкой вёрстки.\n\n` +
       `Для создания проектов я предпочитаю использовать Vite — современный инструмент сборки, который обеспечивает высокую скорость разработки и\u00A0удобство настройки.\n\n` +
-      `Моя цель — создавать плавные и\u00A0интуитивно понятные интерфейсы для\u00A0пользователей.`,
+      `Моя цель — создавать плавные и\u00A0интуитивно понятные интерфейсы для\u00A0пользователей.\n\n` +
+      `Нажми на\u00A0сердечко...`,
     skills: "Мои навыки",
     "Advanced": "Опытный",
     "Intermediate": "Средний уровень",

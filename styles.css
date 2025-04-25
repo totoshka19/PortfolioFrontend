@@ -32,3 +32,23 @@ header nav a:hover,
   color: #F8C15C;
 }
 
+#projects .grid a.mt-2 {
+  position: relative;
+  padding-bottom: 2px;
+  text-decoration: none;
+  align-self: flex-start;
+}
+#projects .grid a.mt-2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: currentColor;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+#projects .grid a.mt-2:hover::after {
+  width: 100%;
+  left: 0;
+}

@@ -17,11 +17,27 @@ export function startHeartAnimation({
     const ch = container.offsetHeight;
     const hw = heart.offsetWidth;
     const hh = heart.offsetHeight;
-    const maxX = cw - hw - margin;
-    const maxY = ch - hh - margin;
-    const x = Math.random() * (maxX - margin) + margin;
-    const y = Math.random() * (maxY - margin) + margin;
-    heart.style.transform = `translate(${x}px, ${y}px) scale(1)`;
+    let x, y;
+    if (img) {
+      const imgRect = img.getBoundingClientRect();
+      const containerRect = container.getBoundingClientRect();
+      const imgOffsetX = imgRect.left - containerRect.left;
+      const imgOffsetY = imgRect.top - containerRect.top;
+      const iw = img.offsetWidth;
+      const ih = img.offsetHeight;
+      const maxX = iw - hw - margin;
+      const maxY = ih - hh - margin;
+      x = Math.random() * (maxX - margin) + margin + imgOffsetX;
+      y = Math.random() * (maxY - margin) + margin + imgOffsetY;
+    } else {
+      const maxX = cw - hw - margin;
+      const maxY = ch - hh - margin;
+      x = Math.random() * (maxX - margin) + margin;
+      y = Math.random() * (maxY - margin) + margin;
+    }
+    heart.style.left = `${x}px`;
+    heart.style.top = `${y}px`;
+    heart.style.transform = 'scale(1)';
     setTimeout(animate, interval);
   }
 
@@ -51,10 +67,13 @@ export function startHeartAnimation({
 
     // Устанавливаем начальную позицию сердца
     heart.style.position = 'absolute';
+    heart.style.transition = 'none';
     heart.style.left = `${initX}px`;
     heart.style.top = `${initY}px`;
     heart.style.transform = 'scale(1)';
     heart.style.cursor = 'pointer';
+    heart.offsetHeight;
+    heart.style.transition = `left ${interval}ms ease, top ${interval}ms ease`;
 
     // Запускаем анимацию
     setTimeout(animate, interval);

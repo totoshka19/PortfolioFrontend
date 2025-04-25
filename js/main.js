@@ -70,3 +70,9 @@ backToTopButton.addEventListener("click", () => {
     behavior: "smooth"
   });
 });
+
+// Инициализация AOS
+AOS.init({
+  once: true,
+  duration: 800
+});

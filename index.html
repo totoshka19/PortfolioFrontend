@@ -8,10 +8,11 @@
 		<script src="https://cdn.tailwindcss.com"></script>
 		<link rel="stylesheet" href="styles.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
 	</head>
-	<body class="bg-gray-900 text-white font-sans">
+	<body class="bg-gray-900 text-white font-sans pt-16">
 		
-		<header class="bg-gray-800 py-4">
+		<header class="fixed top-0 left-0 right-0 bg-gray-800 py-4 z-50">
 			<nav class="container mx-auto flex justify-between items-center px-4 gap-x-4">
 				<!-- Логотип -->
 				<h1 class="text-3xl font-medium" data-lang="portfolio">${<span class="text-yellow-500">AK</span>}</h1>
@@ -56,14 +57,14 @@
 		</header>
 		
 		<!-- Hero Section -->
-		<section id="hero" class="container mx-auto text-center py-20">
+		<section id="hero" class="container mx-auto text-center py-20" data-aos="fade-down" data-aos-duration="800">
 			<img src="assets/avatar.jpg" alt="Avatar" class="w-32 h-32 rounded-full mx-auto mb-4">
 			<h1 class="text-4xl font-bold mb-4" data-lang="greeting">Hi, I'm Anna Kapitanova</h1>
 			<p class="text-lg text-gray-400" data-lang="profession">HTML layout designer | Frontend Developer | Passionate about building modern web applications</p>
 		</section>
 		
 		<!-- About Section -->
-		<section id="about" class="container mx-auto py-10">
+		<section id="about" class="container mx-auto py-10" data-aos="fade-up" data-aos-duration="800">
 			<h2 class="text-3xl font-bold text-center mb-6" data-lang="about">About Me</h2>
 			<div class="flex flex-col md:flex-row items-center">
 				<div class="md:w-1/2 p-4">
@@ -77,7 +78,7 @@
 			</div>
 		</section>
 		
-		<section id="skills" class="container mx-auto py-10 bg-gray-800">
+		<section id="skills" class="container mx-auto py-10 bg-gray-800" data-aos="fade-up" data-aos-duration="800">
 			<h2 class="text-3xl font-bold text-center mb-6" data-lang="skills">My Skills</h2>
 			<div class="grid grid-cols-2 md:grid-cols-4 gap-10 p-4">
 				<!-- HTML -->
@@ -144,7 +145,7 @@
 		</section>
 		
 		<!-- Projects Section -->
-		<section id="projects" class="container mx-auto py-10">
+		<section id="projects" class="container mx-auto py-10" data-aos="fade-up" data-aos-duration="800">
 			<h2 class="text-3xl font-bold text-center mb-6" data-lang="projects">My Projects</h2>
 			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
 				<!-- Проекты будут добавлены сюда динамически -->
@@ -152,29 +153,29 @@
 		</section>
 		
 		<!-- Education Section -->
-		<section id="education" class="container mx-auto py-10">
+		<section id="education" class="container mx-auto py-10" data-aos="fade-up" data-aos-duration="800">
 			<h2 class="text-3xl font-bold text-center mb-6" data-lang="education">Education</h2>
 			<div class="grid grid-cols-1 md:grid-cols-2 gap-6 p-4">
 				<!-- Элементы образовательных блоков -->
-				<div class="bg-gray-800 rounded-lg p-6 shadow-lg">
+				<div class="bg-gray-800 rounded-lg p-6 shadow-lg" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
 					<h3 class="text-xl font-bold mb-2" data-lang="edu-html-academy">HTML Academy</h3>
 					<p class="text-gray-400 mb-2" data-lang="edu-html-academy-desc">JavaScript developer</p>
 					<p class="text-gray-500">2024-2025</p>
 				</div>
 				
-				<div class="bg-gray-800 rounded-lg p-6 shadow-lg">
+				<div class="bg-gray-800 rounded-lg p-6 shadow-lg" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
 					<h3 class="text-xl font-bold mb-2" data-lang="edu-codecademy">Codecademy</h3>
 					<p class="text-gray-400 mb-2" data-lang="edu-codecademy-desc">Frontend Engineer</p>
 					<p class="text-gray-500">2023-2024</p>
 				</div>
 				
-				<div class="bg-gray-800 rounded-lg p-6 shadow-lg">
+				<div class="bg-gray-800 rounded-lg p-6 shadow-lg" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
 					<h3 class="text-xl font-bold mb-2" data-lang="edu-training-center">Training center "Professional"</h3>
 					<p class="text-gray-400 mb-2" data-lang="edu-training-center-desc">Frontend developer</p>
 					<p class="text-gray-500">2023</p>
 				</div>
 				
-				<div class="bg-gray-800 rounded-lg p-6 shadow-lg">
+				<div class="bg-gray-800 rounded-lg p-6 shadow-lg" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
 					<h3 class="text-xl font-bold mb-2" data-lang="edu-synergy">Synergy University</h3>
 					<p class="text-gray-400 mb-2" data-lang="edu-synergy-desc">Digital designer. Basics of working in Figma</p>
 					<p class="text-gray-500">2023</p>
@@ -183,7 +184,7 @@
 		</section>
 		
 		<!-- Footer -->
-		<footer class="bg-gray-800 py-4 text-center">
+		<footer class="bg-gray-800 py-4 text-center" data-aos="fade-up" data-aos-duration="800">
 			<div class="mt-4 mb-4 space-x-4">
 				<!-- Ссылки на соцсети -->
 				<a href="https://t.me/Totoshka19" target="_blank" class="text-gray-400 hover:text-blue-400 transition duration-300">
@@ -208,5 +209,6 @@
 		</button>
 		
 		<script type="module" src="./js/main.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 	</body>
 </html>

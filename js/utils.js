@@ -16,17 +16,27 @@ export function updateLanguage(lang) {
     projectsContainer.innerHTML = ""; // Очищаем контейнер
 
     // Используем Object.values для получения массива проектов из объекта
-    Object.values(translations[lang].project).forEach((project) => {
+    Object.values(translations[lang].project).forEach((project, i) => {
       // Создаем карточку проекта
       const projectCard = document.createElement("div");
-      projectCard.className = "bg-gray-800 rounded-lg overflow-hidden shadow-lg";
+      projectCard.className = "bg-gray-800 rounded-lg overflow-hidden";
+      // Добавляем атрибуты AOS для анимации
+      projectCard.setAttribute("data-aos", "zoom-in");
+      projectCard.setAttribute("data-aos-duration", "800");
+      projectCard.setAttribute("data-aos-delay", `${i * 100}`);
 
       // Создаем изображение
       const img = document.createElement("img");
       img.src = project.image;
       img.alt = project.name;
-      img.className = "w-full h-48 object-cover object-top";
-      projectCard.appendChild(img);
+      img.className = "w-full h-48 object-cover object-top transition-transform duration-300 hover:scale-105";
+      // Оборачиваем изображение в ссылку на проект
+      const imgLink = document.createElement("a");
+      imgLink.href = project.url;
+      imgLink.target = "_blank";
+      imgLink.rel = "noopener noreferrer";
+      imgLink.appendChild(img);
+      projectCard.appendChild(imgLink);
 
       // Создаем контейнер для текстового содержимого
       const contentDiv = document.createElement("div");
@@ -59,6 +69,8 @@ export function updateLanguage(lang) {
       // Добавляем карточку в контейнер проектов
       projectsContainer.appendChild(projectCard);
     });
+    // Обновляем анимации AOS после добавления динамических карточек
+    AOS.refresh();
   }
 }
 

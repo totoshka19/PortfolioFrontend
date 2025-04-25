@@ -3,13 +3,25 @@
 export function startHeartAnimation({
                                       heartSelector = '.heart-anim',
                                       margin = 10,
-                                      interval = 5000
+                                      interval = 5000,
+                                      offsetX = 0,
+                                      offsetY = 0
                                     } = {}) {
   const heart = document.querySelector(heartSelector);
   if (!heart) return;
 
   const container = heart.parentElement;
   const img = container.querySelector('img');
+
+  // helper for parsing margin: supports number, 'px', and '%' relative to total dimension
+  function parseOffset(val, total) {
+    if (typeof val === 'string' && val.trim().endsWith('%')) {
+      return (parseFloat(val) / 100) * total;
+    } else if (typeof val === 'string' && val.trim().endsWith('px')) {
+      return parseFloat(val);
+    }
+    return Number(val);
+  }
 
   // Функция для анимации перемещения сердца
   function animate() {
@@ -21,19 +33,29 @@ export function startHeartAnimation({
     if (img) {
       const imgRect = img.getBoundingClientRect();
       const containerRect = container.getBoundingClientRect();
+
       const imgOffsetX = imgRect.left - containerRect.left;
       const imgOffsetY = imgRect.top - containerRect.top;
+
       const iw = img.offsetWidth;
       const ih = img.offsetHeight;
-      const maxX = iw - hw - margin;
-      const maxY = ih - hh - margin;
-      x = Math.random() * (maxX - margin) + margin + imgOffsetX;
-      y = Math.random() * (maxY - margin) + margin + imgOffsetY;
+      const mX = parseOffset(margin, iw);
+      const mY = parseOffset(margin, ih);
+      const maxX = iw - hw - mX;
+      const maxY = ih - hh - mY;
+      x = Math.random() * (maxX - mX) + mX + imgOffsetX;
+      y = Math.random() * (maxY - mY) + mY + imgOffsetY;
     } else {
-      const maxX = cw - hw - margin;
-      const maxY = ch - hh - margin;
-      x = Math.random() * (maxX - margin) + margin;
-      y = Math.random() * (maxY - margin) + margin;
+      const cw = container.offsetWidth;
+      const ch = container.offsetHeight;
+      const hw = heart.offsetWidth;
+      const hh = heart.offsetHeight;
+      const mX = parseOffset(margin, cw);
+      const mY = parseOffset(margin, ch);
+      const maxX = cw - hw - mX;
+      const maxY = ch - hh - mY;
+      x = Math.random() * (maxX - mX) + mX;
+      y = Math.random() * (maxY - mY) + mY;
     }
     heart.style.left = `${x}px`;
     heart.style.top = `${y}px`;
@@ -64,6 +86,17 @@ export function startHeartAnimation({
       initX += imgOffsetX;
       initY += imgOffsetY;
     }
+
+    // Смещаем initX/initY с учётом margin (число, 'px' или '%')
+    const mXInit = parseOffset(margin, cw);
+    const mYInit = parseOffset(margin, ch);
+    initX -= mXInit;
+    initY -= mYInit;
+    // Применяем пользовательский offsetX и offsetY (число, 'px' или '%')
+    const oX = parseOffset(offsetX, cw);
+    const oY = parseOffset(offsetY, ch);
+    initX += oX;
+    initY += oY;
 
     // Устанавливаем начальную позицию сердца
     heart.style.position = 'absolute';

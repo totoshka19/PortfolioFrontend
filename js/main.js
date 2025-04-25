@@ -71,7 +71,12 @@ document.addEventListener("DOMContentLoaded", () => {
   professionEl.textContent = "";
   typewriterEffect(professionEl, professionText, 100, 2000);
   // Запускаем внешнюю функцию анимации сердца
-  startHeartAnimation({ heartSelector: '.heart-anim', margin: 10, interval: 5000 });
+  startHeartAnimation({
+    margin: 10,
+    offsetX: '-12,5%',
+    offsetY: '-2,8%',
+    interval: 3000
+  });
 });
 
 // Показываем/скрываем кнопку при прокрутке

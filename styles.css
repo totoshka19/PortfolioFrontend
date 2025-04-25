@@ -78,3 +78,12 @@ header nav a:hover,
   animation: none !important;
   transition: transform 5s ease-in-out;
 }
+
+/* Пульсация сердца */
+.heart-pulse {
+  animation: pulse 1.5s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}

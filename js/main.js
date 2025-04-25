@@ -7,6 +7,7 @@ import {
   menuLinks
 } from "./const.js";
 import { updateLanguage, closeMobileMenu, typewriterEffect } from "./utils.js";
+import { startHeartAnimation } from "./heart-animation.js";
 
 // Переключение языка
 let currentLang = "en"; // Текущий язык
@@ -61,37 +62,13 @@ menuLinks.forEach((link) => {
 // Инициализация: Отображаем проекты на английском языке при загрузке страницы
 document.addEventListener("DOMContentLoaded", () => {
   updateLanguage("en"); // Устанавливаем английский язык по умолчанию
-  // Запускаем typewriter для текста профессии при загрузке
   const professionEl = document.querySelector('[data-lang="profession"]');
   const professionText = professionEl.textContent;
-  // Фиксируем высоту контейнера, чтобы он не схлопывался при удалении текста
   professionEl.style.minHeight = `${professionEl.getBoundingClientRect().height}px`;
   professionEl.textContent = "";
   typewriterEffect(professionEl, professionText, 100, 2000);
-  // Запускаем анимацию плавающего сердца над картинкой
-  const heart = document.querySelector('.heart-anim');
-  if (heart) {
-    const container = heart.parentElement;
-    const minMargin = 5;
-    function animateHeart() {
-      const cw = container.offsetWidth;
-      const ch = container.offsetHeight;
-      const hw = heart.offsetWidth;
-      const hh = heart.offsetHeight;
-      const maxX = cw - hw - minMargin;
-      const maxY = ch - hh - minMargin;
-      const x = Math.random() * (maxX - minMargin) + minMargin;
-      const y = Math.random() * (maxY - minMargin) + minMargin;
-      // Сохраняем координаты и позицию
-      heart.dataset.x = x;
-      heart.dataset.y = y;
-      heart.style.transform = `translate(${x}px, ${y}px) scale(1)`;
-      setTimeout(animateHeart, 5000);
-    }
-    animateHeart();
-    // Курсор pointer при hover
-    heart.style.cursor = 'pointer';
-  }
+  // Запускаем внешнюю функцию анимации сердца
+  startHeartAnimation({ heartSelector: '.heart-anim', margin: 10, interval: 5000 });
 });
 
 // Кнопка "Наверх"

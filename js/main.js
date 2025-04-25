@@ -61,6 +61,8 @@ langToggle.addEventListener("click", () => {
   // Перезапускаем typewriter для текста профессии после смены языка
   const professionEl = document.querySelector('[data-lang="profession"]');
   const professionText = professionEl.textContent;
+  // Фиксируем высоту контейнера, чтобы он не схлопывался при удалении текста
+  professionEl.style.minHeight = `${professionEl.getBoundingClientRect().height}px`;
   professionEl.textContent = "";
   typewriterEffect(professionEl, professionText, 100, 2000);
 });
@@ -94,6 +96,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // Запускаем typewriter для текста профессии при загрузке
   const professionEl = document.querySelector('[data-lang="profession"]');
   const professionText = professionEl.textContent;
+  // Фиксируем высоту контейнера, чтобы он не схлопывался при удалении текста
+  professionEl.style.minHeight = `${professionEl.getBoundingClientRect().height}px`;
   professionEl.textContent = "";
   typewriterEffect(professionEl, professionText, 100, 2000);
 });

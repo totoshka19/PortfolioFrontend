@@ -12,8 +12,10 @@ import { updateLanguage, closeMobileMenu, typewriterEffect } from "./utils.js";
 let currentLang = "en"; // Текущий язык
 
 // Глобальные счётчики для функции typewriterEffect
-window.typewriterCounter = 0;
-window.currentTypewriterColorIndex = 0;
+let typewriterCounter = 0;
+let currentTypewriterColorIndex = 0;
+window.typewriterCounter = typewriterCounter;
+window.currentTypewriterColorIndex = currentTypewriterColorIndex;
 
 langToggle.addEventListener("click", () => {
   if (currentLang === "en") {
@@ -66,6 +68,30 @@ document.addEventListener("DOMContentLoaded", () => {
   professionEl.style.minHeight = `${professionEl.getBoundingClientRect().height}px`;
   professionEl.textContent = "";
   typewriterEffect(professionEl, professionText, 100, 2000);
+  // Запускаем анимацию плавающего сердца над картинкой
+  const heart = document.querySelector('.heart-anim');
+  if (heart) {
+    const container = heart.parentElement;
+    const minMargin = 5;
+    function animateHeart() {
+      const cw = container.offsetWidth;
+      const ch = container.offsetHeight;
+      const hw = heart.offsetWidth;
+      const hh = heart.offsetHeight;
+      const maxX = cw - hw - minMargin;
+      const maxY = ch - hh - minMargin;
+      const x = Math.random() * (maxX - minMargin) + minMargin;
+      const y = Math.random() * (maxY - minMargin) + minMargin;
+      // Сохраняем координаты и позицию
+      heart.dataset.x = x;
+      heart.dataset.y = y;
+      heart.style.transform = `translate(${x}px, ${y}px) scale(1)`;
+      setTimeout(animateHeart, 5000);
+    }
+    animateHeart();
+    // Курсор pointer при hover
+    heart.style.cursor = 'pointer';
+  }
 });
 
 // Кнопка "Наверх"

@@ -72,3 +72,9 @@ header nav a:hover,
 #music-toggle:hover {
   background-color: #d19e43 !important;
 }
+
+/* Переопределение анимации сердца: используем JavaScript для движения */
+.heart-anim {
+  animation: none !important;
+  transition: transform 5s ease-in-out;
+}

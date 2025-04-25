@@ -75,3 +75,11 @@ AOS.init({
   once: true,
   duration: 800
 });
+
+// Перезагрузка страницы при клике на логотип
+const logo = document.getElementById("logo");
+if (logo) {
+  logo.addEventListener("click", () => {
+    window.location.reload();
+  });
+}

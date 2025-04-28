@@ -29,8 +29,6 @@ export function startHeartAnimation({
 
   // Функция для анимации перемещения сердца
   function animate(heartElement = heart) {
-    const cw = container.offsetWidth;
-    const ch = container.offsetHeight;
     const hw = heartElement.offsetWidth;
     const hh = heartElement.offsetHeight;
     let x, y;
@@ -131,7 +129,7 @@ export function startHeartAnimation({
     setTimeout(() => animate(heart), interval);
 
     // Обработчик клика: спавним новое сердце или удаляем его после достижения лимита
-    container.addEventListener('click', (e) => {
+    container.addEventListener('mousedown', (e) => {
       const clickedHeart = e.target.closest('.heart-anim');
       if (!clickedHeart) return;
       const hearts = Array.from(container.querySelectorAll('.heart-anim'));

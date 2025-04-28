@@ -53,6 +53,66 @@ export const translations = {
         description: "Adaptive landing page on HTML, CSS. Swiper.js is used for the slider. Video insertion using iframe. Accordion is made on JavaScript.",
         image: "assets/projects/leadconveer.jpg",
         url: "https://totoshka19.github.io/leadconveer/"
+      },
+      "weather-widget": {
+        name: "Weather widget",
+        description: "Weather widget with the ability to change the city.",
+        image: "assets/projects/weather-widget.jpg",
+        url: "https://totoshka19.github.io/Portfolio/Projects/Weather/index.html"
+      },
+      "freshy-bar": {
+        name: "Freshy Bar",
+        description: "Layout of a one-page website.",
+        image: "assets/projects/freshy-bar.jpg",
+        url: "https://totoshka19.github.io/FreshyBar/"
+      },
+      "mini-game": {
+        name: "Mini game",
+        description: "Mini game in JavaScript.",
+        image: "assets/projects/mini-game.jpg",
+        url: "https://totoshka19.github.io/Portfolio/Projects/Game/index.html"
+      },
+      "image-slider": {
+        name: "Image slider",
+        description: "Image slider in JavaScript.",
+        image: "assets/projects/image-slider.jpg",
+        url: "https://totoshka19.github.io/Portfolio/Projects/Slider/index.html"
+      },
+      "drag-and-drop": {
+        name: "Drag&drop",
+        description: "Drag and drop an element using JavaScript.",
+        image: "assets/projects/drag-and-drop.jpg",
+        url: "https://totoshka19.github.io/Portfolio/Projects/Drag-drop/index.html"
+      },
+      "picture-gallery": {
+        name: "Picture gallery",
+        description: "A small project in JavaScript.",
+        image: "assets/projects/picture-gallery.jpg",
+        url: "https://totoshka19.github.io/Portfolio/Projects/CardGallery/index.html"
+      },
+      "leasing": {
+        name: "D&M Leasing",
+        description: "Layout of a multi-page website.",
+        image: "assets/projects/leasing.jpg",
+        url: "https://totoshka19.github.io/Portfolio/Projects/Lease-cars/Lease-cars/index.html"
+      },
+      "go-trip": {
+        name: "GoTrip",
+        description: "Layout of a one-page website.",
+        image: "assets/projects/go-trip.jpg",
+        url: "https://totoshka19.github.io/Portfolio/Projects/GoTrip/GoTrip/index.html"
+      },
+      "organic-food": {
+        name: "Organic Food",
+        description: "Adaptive landing page.",
+        image: "assets/projects/organic-food.jpg",
+        url: "https://totoshka19.github.io/Portfolio/Projects/Organic-Food_adaptive/Organic-Food/index.html"
+      },
+      "cars": {
+        name: "Cars",
+        description: "Adaptive landing page.",
+        image: "assets/projects/cars.jpg",
+        url: "https://totoshka19.github.io/Portfolio/Projects/Cars/Cars/index.html"
       }
     },
     "view-project": "View Project",
@@ -111,6 +171,66 @@ export const translations = {
         description: "Адаптивный лендинг на HTML, CSS. Для слайдера используется Swiper.js. Вставка видео с помощью iframe. Аккордеон сделан на JavaScript.",
         image: "assets/projects/leadconveer.jpg",
         url: "https://totoshka19.github.io/leadconveer/"
+      },
+      "weather-widget": {
+        name: "Виджет погоды",
+        description: "Виджет погоды с возможностью смены города.",
+        image: "assets/projects/weather-widget.jpg",
+        url: "https://totoshka19.github.io/Portfolio/Projects/Weather/index.html"
+      },
+      "freshy-bar": {
+        name: "Freshy Bar",
+        description: "Верстка одностраничного сайта.",
+        image: "assets/projects/freshy-bar.jpg",
+        url: "https://totoshka19.github.io/FreshyBar/"
+      },
+      "mini-game": {
+        name: "Мини игра",
+        description: "Мини игра на JavaScript.",
+        image: "assets/projects/mini-game.jpg",
+        url: "https://totoshka19.github.io/Portfolio/Projects/Game/index.html"
+      },
+      "image-slider": {
+        name: "Слайдер картинок",
+        description: "Слайдер картинок на JavaScript.",
+        image: "assets/projects/image-slider.jpg",
+        url: "https://totoshka19.github.io/Portfolio/Projects/Slider/index.html"
+      },
+      "drag-and-drop": {
+        name: "Drag&drop",
+        description: "Перетаскивание элемента на JavaScript.",
+        image: "assets/projects/drag-and-drop.jpg",
+        url: "https://totoshka19.github.io/Portfolio/Projects/Drag-drop/index.html"
+      },
+      "picture-gallery": {
+        name: "Галерея картинок",
+        description: "Небольшой проект на чистом JavaScript.",
+        image: "assets/projects/picture-gallery.jpg",
+        url: "https://totoshka19.github.io/Portfolio/Projects/CardGallery/index.html"
+      },
+      "leasing": {
+        name: "D&M Leasing",
+        description: "Верстка многостраничного сайта.",
+        image: "assets/projects/leasing.jpg",
+        url: "https://totoshka19.github.io/Portfolio/Projects/Lease-cars/Lease-cars/index.html"
+      },
+      "go-trip": {
+        name: "GoTrip",
+        description: "Верстка одностраничного сайта.",
+        image: "assets/projects/go-trip.jpg",
+        url: "https://totoshka19.github.io/Portfolio/Projects/GoTrip/GoTrip/index.html"
+      },
+      "organic-food": {
+        name: "Organic Food",
+        description: "Верстка одностраничного сайта.",
+        image: "assets/projects/organic-food.jpg",
+        url: "https://totoshka19.github.io/Portfolio/Projects/Organic-Food_adaptive/Organic-Food/index.html"
+      },
+      "cars": {
+        name: "Cars",
+        description: "Верстка одностраничного сайта.",
+        image: "assets/projects/cars.jpg",
+        url: "https://totoshka19.github.io/Portfolio/Projects/Cars/Cars/index.html"
       }
     },
     "view-project": "Посмотреть проект",

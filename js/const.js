@@ -24,6 +24,12 @@ export const translations = {
     "edu-synergy-desc": "Digital designer. Basics of working in Figma",
     projects: "My Projects",
     project: {
+      "amr": {
+        name: "Academy of Mental Development",
+        description: "Multi-page website with a blog in Vue 3 with GSAP animations.",
+        image: "assets/projects/amr.webp",
+        url: "https://agliamovam.ru/"
+      },
       "e-shop": {
         name: "E-shop",
         description: "Online store project on React and TypeScript.",
@@ -142,6 +148,12 @@ export const translations = {
     "edu-synergy-desc": "Дизайнер интерфейсов. Основы работы в Figma",
     projects: "Мои проекты",
     project: {
+      "amr": {
+        name: "Академия ментального развития",
+        description: "Многостраничный сайт с блогом на Vue 3 c анимациями GSAP.",
+        image: "assets/projects/amr.webp",
+        url: "https://agliamovam.ru/"
+      },
       "e-shop": {
         name: "Интернет-магазин",
         description: "Проект на React и TypeScript.",

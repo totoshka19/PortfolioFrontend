@@ -24,6 +24,12 @@ export const translations = {
     "edu-synergy-desc": "Digital designer. Basics of working in Figma",
     projects: "My Projects",
     project: {
+      "attic": {
+        name: "ATTIC",
+        description: "Responsive landing page on Nuxt 4, PUG, Swiper.js",
+        image: "assets/projects/attic.webp",
+        url: "https://atticalgo.com/"
+      },
       "amr": {
         name: "Academy of Mental Development",
         description: "Multi-page website with a blog in Vue 3 with GSAP animations.",
@@ -148,6 +154,12 @@ export const translations = {
     "edu-synergy-desc": "Дизайнер интерфейсов. Основы работы в Figma",
     projects: "Мои проекты",
     project: {
+      "attic": {
+        name: "ATTIC",
+        description: "Адаптивный лендинг на Nuxt 4, PUG, Swiper.js",
+        image: "assets/projects/attic.webp",
+        url: "https://atticalgo.com/"
+      },
       "amr": {
         name: "Академия ментального развития",
         description: "Многостраничный сайт с блогом на Vue 3 c анимациями GSAP.",

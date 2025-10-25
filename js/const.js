@@ -36,6 +36,12 @@ export const translations = {
         image: "assets/projects/amr.webp",
         url: "https://agliamovam.ru/"
       },
+      "los-bio": {
+        name: "Los-Bio",
+        description: "Multi-page website built with Nuxt 3 (SSR), PUG, and SCSS. Features BEM methodology and a Swiper.js slider.",
+        image: "assets/projects/los-bio.webp",
+        url: "https://los-bio.vercel.app/"
+      },
       "e-shop": {
         name: "E-shop",
         description: "Online store project on React and TypeScript.",
@@ -165,6 +171,12 @@ export const translations = {
         description: "Многостраничный сайт с блогом на Vue 3 c анимациями GSAP.",
         image: "assets/projects/amr.webp",
         url: "https://agliamovam.ru/"
+      },
+      "los-bio": {
+        name: "Los-Bio",
+        description: "Многостраничный сайт на Nuxt 3 (SSR), PUG и SCSS. Используется методология БЭМ и слайдер Swiper.js.",
+        image: "assets/projects/los-bio.webp",
+        url: "https://los-bio.vercel.app/"
       },
       "e-shop": {
         name: "Интернет-магазин",

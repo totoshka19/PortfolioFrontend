@@ -9,6 +9,14 @@ export const translations = {
       `My goal is\u00A0to\u00A0transform complex challenges into simple, elegant solutions that work for\u00A0both the\u00A0user and\u00A0the\u00A0business.\n\n` +
       `Click on\u00A0the\u00A0heart...`,
     skills: "My Skills",
+    skillGroups: {
+      langAndTech: "Languages & Core Technologies",
+      frameworks: "Frameworks & Ecosystem",
+      styling: "Layout & Styling",
+      devops: "Build & DevOps",
+      apiTools: "API & Tools",
+      methodologies: "Methodologies & Processes"
+    },
     "Advanced": "Advanced",
     "Intermediate": "Intermediate",
     education: "Education",
@@ -143,6 +151,14 @@ export const translations = {
       `Моя главная цель\u00A0— превращать сложные задачи в\u00A0простые и\u00A0элегантные решения, которые работают как для\u00A0пользователя, так и\u00A0для\u00A0бизнеса.\n\n` +
       `Нажми на\u00A0сердечко...`,
     skills: "Мои навыки",
+    skillGroups: {
+      langAndTech: "Языки и основные технологии",
+      frameworks: "Фреймворки и экосистема",
+      styling: "Верстка и стилизация",
+      devops: "Сборка и DevOps",
+      apiTools: "API и Инструменты",
+      methodologies: "Методологии и процессы"
+    },
     "Advanced": "Опытный",
     "Intermediate": "Средний уровень",
     education: "Образование",

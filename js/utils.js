@@ -6,8 +6,15 @@ export function updateLanguage(lang) {
   // Обновляем текстовые элементы
   document.querySelectorAll("[data-lang]").forEach((element) => {
     const key = element.getAttribute("data-lang");
-    if (translations[lang][key]) {
-      element.textContent = translations[lang][key];
+
+    // Разбиваем ключ по точке, чтобы работать с вложенными объектами
+    const keys = key.split('.');
+
+    // Находим значение в объекте translations, идя по цепочке ключей
+    const value = keys.reduce((obj, k) => (obj && obj[k] !== undefined) ? obj[k] : null, translations[lang]);
+
+    if (value) {
+      element.textContent = value;
     }
   });
 

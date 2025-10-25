@@ -4,11 +4,9 @@ export const translations = {
     greeting: "Hi, I'm Anna Kapitanova",
     profession: "HTML layout designer | Frontend Developer | Passionate about building modern web applications",
     about: "About Me",
-    "about-text": `I am a frontend developer with\u00A0experience in\u00A0creating responsive websites and\u00A0user-friendly web\u00A0applications.\n` +
-      `I work with\u00A0modern HTML, CSS, JavaScript technologies and\u00A0the React framework.\n\n` +
-      `In my work, I actively use tools such as Redux for\u00A0managing the global state of\u00A0the application, SCSS for\u00A0writing structured and\u00A0scalable styles, and\u00A0Tailwind CSS for\u00A0fast and\u00A0flexible layout.\n\n` +
-      `To create projects, I prefer to\u00A0use Vite — a\u00A0modern build tool that ensures high development speed and\u00A0ease of\u00A0customization.\n\n` +
-      `My goal is to\u00A0create smooth and\u00A0intuitive interfaces for\u00A0users.\n\n` +
+    "about-text": `I\u00A0am a\u00A0frontend developer passionate about creating modern, user-centric web applications.\n\n` +
+      `My approach is\u00A0built on\u00A0writing clean, scalable code and\u00A0thoughtful architecture. I\u00A0believe technology is\u00A0a\u00A0tool for\u00A0creating products that are not\u00A0only functional but\u00A0also a\u00A0joy to\u00A0use.\n\n` +
+      `My goal is\u00A0to\u00A0transform complex challenges into simple, elegant solutions that work for\u00A0both the\u00A0user and\u00A0the\u00A0business.\n\n` +
       `Click on\u00A0the\u00A0heart...`,
     skills: "My Skills",
     "Advanced": "Advanced",
@@ -140,11 +138,9 @@ export const translations = {
     greeting: "Привет, я Анна Капитанова",
     profession: "HTML-верстальщик | Frontend-разработчик | Создаю современные веб-приложения",
     about: "Обо мне",
-    "about-text": `Я фронтенд-разработчик с\u00A0опытом создания адаптивных сайтов и\u00A0удобных веб-приложений.\n` +
-      `Я работаю с\u00A0современными технологиями HTML, CSS, JavaScript и\u00A0фреймворком React.\n\n` +
-      `В своей работе я активно использую такие инструменты, как Redux для\u00A0управления глобальным состоянием приложения, SCSS для\u00A0написания структурированных и\u00A0масштабируемых стилей, а\u00A0также Tailwind CSS для\u00A0быстрой и\u00A0гибкой вёрстки.\n\n` +
-      `Для создания проектов я предпочитаю использовать Vite — современный инструмент сборки, который обеспечивает высокую скорость разработки и\u00A0удобство настройки.\n\n` +
-      `Моя цель — создавать плавные и\u00A0интуитивно понятные интерфейсы для\u00A0пользователей.\n\n` +
+    "about-text": `Я\u00A0фронтенд-разработчик, увлеченный созданием современных и\u00A0удобных для\u00A0пользователя веб-приложений.\n\n` +
+      `В\u00A0основе моего подхода\u00A0— чистый, масштабируемый код и\u00A0продуманная архитектура. Я\u00A0убеждена, что технология\u00A0— это инструмент для\u00A0создания продуктов, которые не\u00A0только функциональны, но\u00A0и\u00A0приятны в\u00A0использовании.\n\n` +
+      `Моя главная цель\u00A0— превращать сложные задачи в\u00A0простые и\u00A0элегантные решения, которые работают как для\u00A0пользователя, так и\u00A0для\u00A0бизнеса.\n\n` +
       `Нажми на\u00A0сердечко...`,
     skills: "Мои навыки",
     "Advanced": "Опытный",

@@ -30,6 +30,12 @@ export const translations = {
     "edu-synergy-desc": "Digital designer. Basics of working in Figma",
     projects: "My Projects",
     project: {
+      "interactive-chart": {
+        name: "Interactive Chart",
+        description: "Data visualization chart with React 19, TypeScript & Recharts. Features filtering, styling, zoom, and PNG export.",
+        image: "assets/projects/interactive-chart.webp",
+        url: "https://interactive-chart-kappa.vercel.app/"
+      },
       "attic": {
         name: "ATTIC",
         description: "Responsive landing page on Nuxt 4, PUG, Swiper.js",
@@ -172,6 +178,12 @@ export const translations = {
     "edu-synergy-desc": "Дизайнер интерфейсов. Основы работы в Figma",
     projects: "Мои проекты",
     project: {
+      "interactive-chart": {
+        name: "Интерактивный график",
+        description: "График для визуализации данных на React 19, TypeScript и Recharts. Реализованы фильтрация, стили, зум и экспорт в PNG.",
+        image: "assets/projects/interactive-chart.webp",
+        url: "https://interactive-chart-kappa.vercel.app/"
+      },
       "attic": {
         name: "ATTIC",
         description: "Адаптивный лендинг на Nuxt 4, PUG, Swiper.js",

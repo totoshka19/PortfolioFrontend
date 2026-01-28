@@ -30,6 +30,18 @@ export const translations = {
     "edu-synergy-desc": "Digital designer. Basics of working in Figma",
     projects: "My Projects",
     project: {
+      "movie-catalog": {
+        name: "Movie Catalog",
+        description: "Web application for browsing movies using the TMDB API. Built with Angular, TypeScript, Material UI, and RxJS.",
+        image: "assets/projects/movie-catalog.webp",
+        url: "https://movie-catalog-hazel.vercel.app/"
+      },
+      "proelect": {
+        name: "PROELECT",
+        description: "Multi-page website built on the Vue 3 & Nuxt 4 stack. It utilizes Pug for templating, SCSS for styling, Swiper.js for sliders, and Nuxt Content for content management.",
+        image: "assets/projects/proelect.webp",
+        url: "https://proelect.ru/"
+      },
       "interactive-chart": {
         name: "Interactive Chart",
         description: "Data visualization chart with React 19, TypeScript & Recharts. Features filtering, styling, zoom, and PNG export.",
@@ -178,6 +190,18 @@ export const translations = {
     "edu-synergy-desc": "Дизайнер интерфейсов. Основы работы в Figma",
     projects: "Мои проекты",
     project: {
+      "movie-catalog": {
+        name: "Каталог фильмов",
+        description: "Веб-приложение для просмотра фильмов через TMDB API. Разработано на Angular, TypeScript, Material UI и RxJS.",
+        image: "assets/projects/movie-catalog.webp",
+        url: "https://movie-catalog-hazel.vercel.app/"
+      },
+      "proelect": {
+        name: "ПРОЭЛЕКТ",
+        description: "Многостраничный сайт, созданный на стеке Vue 3 и Nuxt 4. Для верстки использован Pug и SCSS, для слайдеров — Swiper.js, а контент управляется через Nuxt Content.",
+        image: "assets/projects/proelect.webp",
+        url: "https://proelect.ru/"
+      },
       "interactive-chart": {
         name: "Интерактивный график",
         description: "График для визуализации данных на React 19, TypeScript и Recharts. Реализованы фильтрация, стили, зум и экспорт в PNG.",

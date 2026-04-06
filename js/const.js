@@ -30,6 +30,12 @@ export const translations = {
     "edu-synergy-desc": "Digital designer. Basics of working in Figma",
     projects: "My Projects",
     project: {
+      "geo-chat": {
+        name: "Geo Chat",
+        description: "Interactive map with AI-powered chat. Built with React, TypeScript, MapLibre GL JS, Redux Toolkit, Groq API (Llama 3.3 70B, SSE streaming), Neon PostgreSQL, and Module Federation microfrontends.",
+        image: "assets/projects/geo-chat.webp",
+        url: "https://geochat-beige.vercel.app/"
+      },
       "movie-catalog": {
         name: "Movie Catalog",
         description: "Web application for browsing movies using the TMDB API. Built with Angular, TypeScript, Material UI, and RxJS.",
@@ -190,6 +196,12 @@ export const translations = {
     "edu-synergy-desc": "Дизайнер интерфейсов. Основы работы в Figma",
     projects: "Мои проекты",
     project: {
+      "geo-chat": {
+        name: "Geo Chat",
+        description: "Интерактивная карта с AI-чатом. Разработано на React, TypeScript, MapLibre GL JS, Redux Toolkit, Groq API (Llama 3.3 70B, SSE-стриминг) и Neon PostgreSQL, с микрофронтендной архитектурой через Module Federation.",
+        image: "assets/projects/geo-chat.webp",
+        url: "https://geochat-beige.vercel.app/"
+      },
       "movie-catalog": {
         name: "Каталог фильмов",
         description: "Веб-приложение для просмотра фильмов через TMDB API. Разработано на Angular, TypeScript, Material UI и RxJS.",

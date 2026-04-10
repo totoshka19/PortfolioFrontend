@@ -30,6 +30,12 @@ export const translations = {
     "edu-synergy-desc": "Digital designer. Basics of working in Figma",
     projects: "My Projects",
     project: {
+      "domiq": {
+        name: "Domiq",
+        description: "Real estate rental and sales marketplace. Backend: FastAPI, async PostgreSQL, WebSocket chat, JWT auth, Celery notifications. Frontend: React, TypeScript, Redux Toolkit, TanStack Query, shadcn/ui, Tailwind CSS, MapTiler SDK. Deployed on Render + Neon + Upstash (backend), Vercel (frontend).",
+        image: "assets/projects/domiq.webp",
+        url: "https://domiq-frontend.vercel.app/"
+      },
       "geo-chat": {
         name: "Geo Chat",
         description: "Interactive map with AI-powered chat. Built with React, TypeScript, MapLibre GL JS, Redux Toolkit, Groq API (Llama 3.3 70B, SSE streaming), Neon PostgreSQL, and Module Federation microfrontends.",
@@ -196,6 +202,12 @@ export const translations = {
     "edu-synergy-desc": "Дизайнер интерфейсов. Основы работы в Figma",
     projects: "Мои проекты",
     project: {
+      "domiq": {
+        name: "Domiq",
+        description: "Маркетплейс аренды и продажи недвижимости. Бэкенд: FastAPI, async PostgreSQL, WebSocket-чат, JWT-авторизация, Celery-уведомления. Фронтенд: React, TypeScript, Redux Toolkit, TanStack Query, shadcn/ui, Tailwind CSS, MapTiler SDK. Деплой: Render + Neon + Upstash (бэкенд), Vercel (фронтенд).",
+        image: "assets/projects/domiq.webp",
+        url: "https://domiq-frontend.vercel.app/"
+      },
       "geo-chat": {
         name: "Geo Chat",
         description: "Интерактивная карта с AI-чатом. Разработано на React, TypeScript, MapLibre GL JS, Redux Toolkit, Groq API (Llama 3.3 70B, SSE-стриминг) и Neon PostgreSQL, с микрофронтендной архитектурой через Module Federation.",
